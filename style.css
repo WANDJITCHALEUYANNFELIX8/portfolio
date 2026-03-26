@@ -189,7 +189,7 @@ section h2{
 	overflow:hidden;/*si le texte dépasse le conteneur, il s'affiche progressivement */
 	border-right:3px solid #00ffcc;
 	white-space:nowrap;
-	width:0;
+	width: fit-content;
 	display:inline-block;
 	margin:auto;
 	text-align:center;
@@ -197,8 +197,8 @@ section h2{
 }
 
 @keyframes typing{
-	from{width:0;}
-	to{width:50%;}
+	from{max-width:0;}
+	to{max-width:24ch;}
 	
 }	
 
@@ -245,7 +245,6 @@ section h2{
 	grid-template-columns:repeat(3,1fr);
 	background:rgba(255,255,255,0.05);
 	margin-top:40px;
-	padding-bottom:40px;
     backdrop-filter:blur(12px);
     padding:50px 55px;
     border-radius:15px;
@@ -260,7 +259,7 @@ section h2{
     box-shadow:0 18px 50px #00c500;
  
 }
-.about-container {
+.about-container ul{
 	text-align:left;
 }
 .about-container h4{
@@ -322,9 +321,8 @@ section h2{
 
 #skills{
 	background:rgba(255,255,255,0.05);
-	margin-top:40px;
     backdrop-filter:blur(12px);
-    margin-top: 200px;
+    margin-top: 80px;
     padding:50px 55px;
     border-radius:15px;
     text-align:center;
@@ -467,7 +465,8 @@ section h2{
 
 .tool-card{
 	position:relative;
-	height:250px;
+	height:auto;
+	min-height:250px;
 	border-radius:15px;
 	overflow:hidden;
 	display:flex;
@@ -643,19 +642,19 @@ section h2{
 
 
 /*=======responsive sur android==========*/	
-@media(max-width:600px){
+@media(max-width:768px){
 
 	.nav-links{
 		position:fixed;
-		top:0;
+		top:55px;
+		padding:20px;
 		right:-100%;
-		width:250px;
+		width:150px;
 		background:#021302;
 		flex-direction:column;
 		align-items:center;
 		backdrop-filter:blur(10px);
-		height:45vh;
-		width:120px;
+		height:auto;
 		display:flex;
 		justify-content:center;
 		transition:0.4s ease;
@@ -685,8 +684,49 @@ section h2{
 	.footer-right{
 		justify-content:center;
 	}	
+	.container, .container-inverted {
+     
+    	width: 100%;
+    	float: none;
+  	}
+  	.network, .security, .programmation, .design {
+    	width: 90%;
+    	float: none;
+    	margin: 0 auto;
+  	}
+  	.network:after, .security:after,
+  	.programmation:after, .design:after,
+  	.container-inverted .security:after,
+  	.container-inverted .design:after {
+    	display: none; /* supprimer les flèches latérales */
+  	}
+  	.timeline:before {
+    	left: 15px; /* déplacer la ligne à gauche */
+  	}
+  	.timeline li .badge {
+    	left: 8px;
+  	}
+  	.hero-text h1 {
+    	font-size: 36px; /* au lieu de 58px */
+  	}
+  	.hero-text h2 {
+    	font-size: 20px;
+  	}
+  	.hero-text p {
+    	text-align: center;
+  	}
+  	.project-card, #about {
+    	padding: 30px 20px;
+  	}
+  	#skills {
+    margin-top: 40px;
+  }
 }				
-	
+@media (max-width: 480px) {
+  .hero-text h1 { font-size: 28px; }
+  .hero-text h3 { font-size: 1.1em; }
+  .contact-container { padding: 0 10px; }
+}	
 	
 /*========== effet au scroll ============*/
 .fade-in{
@@ -700,6 +740,7 @@ section h2{
 	transform:translateY(0);
 	transition:opacity 1s ease-out, transform 1s ease-out;
 }
+
 	
 /*ease-out: fait démarrer vite et finir doucement*/	
 	

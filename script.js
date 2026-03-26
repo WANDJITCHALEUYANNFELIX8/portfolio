@@ -124,6 +124,11 @@ animate();
 window.addEventListener("resize", () => {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
+	
+	particules.forEach(p => {
+		p.x=Math.min(p.x, canvas.width);
+		p.y=Math.min(p.y, canvas.height);
+	});	
 });
 
 
