@@ -297,12 +297,12 @@ section h2{
     flex:1 1 250px;
     text-align:center;
     box-shadow:0 6px 20px #00c500;
-    transition:transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    transition:translate 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     perspective:1000px;
 }
 
 .project-card:hover{
-    transform:rotateY(8deg) rotateX(5deg) translateY(-5px) scale(1.03);
+    translate:0 -5px;
     box-shadow:0 18px 50px #00c500;
     background:rgba(0,200,150,0.1);
 }
@@ -402,14 +402,14 @@ section h2{
 	position:relative;
 	box-shadow:0 6px 20px #00d900;
 	background:#111;
-	transition:transform 0.5s ease, box-shadow 0.5s ease;
+	transition:translate 0.5s ease, box-shadow 0.5s ease;
 	list-style:none;
 }	
 
 .network:hover, .security:hover, .programmation:hover, .design:hover{
 
 	
-	transform: translateY(-5px) scale(1.03);
+	translate: 0 -5px;
     box-shadow:0 18px 50px #00c500;
 
 }	
@@ -732,13 +732,12 @@ section h2{
 .fade-in{
 	opacity: 0;
 	transform:translateY(30px);
-	will-change: opacity,transform;/*le navigateur prédit la transform et la rend plus fluide*/
-	transition: all 0.8s ease-out;
+	transition: opacity 1s ease-out,transform 1s ease-out,translate 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 .fade-in.show{
 	opacity: 1;
 	transform:translateY(0);
-	transition:opacity 1s ease-out, transform 1s ease-out;
+	
 }
 
 	
