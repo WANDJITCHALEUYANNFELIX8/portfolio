@@ -1,0 +1,9 @@
+# Autoriser tous les moteurs de recherche
+User-agent: *
+Allow: /
+
+# Interdire les pages inutiles
+Disallow: /404.html
+
+# Indiquer le sitemap
+Sitemap: https://portfolio-ura.vercel.app/sitemap.xml
