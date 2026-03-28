@@ -1,14 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "**/*",
-      "use": "@vercel/static"
-    }
-  ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/",
       "headers": [
         {
           "key": "X-Frame-Options",
@@ -23,12 +16,21 @@
           "value": "strict-origin-when-cross-origin"
         },
         {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=()"
-        },
-        {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src https://formspree.io; form-action https://formspree.io;"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
         }
       ]
     }
