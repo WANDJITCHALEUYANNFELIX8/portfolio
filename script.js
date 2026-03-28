@@ -190,13 +190,25 @@ contactForm.addEventListener("submit",function (e){
 	});
 });	
 		
-			
 
 
 
+/*Sécurité*/
 
+/* Protection email et téléphone contre les bots */
+document.addEventListener('DOMContentLoaded', () => {
+	const mail = 'wandjiyann8' + '@' + 'gmail.com';
+	const tel = '+237' + '698121521';
+  
+	document.querySelectorAll('.mail-link').forEach(a => {
+		a.href = 'mailto:' + mail;
+	});
+  
+	document.querySelectorAll('.tel-link').forEach(a => {
+		a.href = 'tel:' + tel;
+	});
+});
 
-		
 		
 		
 		

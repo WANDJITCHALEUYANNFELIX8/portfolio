@@ -4,6 +4,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+	<meta http-equiv="Content-Security-Policy" 
+	content="default-src 'self'; 
+             script-src 'self'; 
+             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+             font-src https://fonts.gstatic.com; 
+             img-src 'self' data:;
+             form-action https://formspree.io;">
+	
 	
 	<title> WANDJI Yann | Cybersecurity And Network Portfolio </title>
 	<link rel="stylesheet" href="style.css">
@@ -48,9 +57,11 @@
 			<div class="hero-text fade-in">
 				<h2>Hey, i'm </h2>
 				<h1>WANDJI YANN</h1>
+				
 				<div class="devise ">
 					<h3 class="typing fade-in">Réseau . Securité . Design </h3>
 				</div>	
+				<img src="images/yann1.jpg" class="hero-img">
 				<h4><br><br>$ whoami</h4> 
 				<p>Etudiant en cybersécurité et réseau. <br>Passionné par la sécurité des sites et applications web, pentesting, analyse réseau et design.
 				</p>
@@ -244,14 +255,15 @@
 			
 			<div class="contact-container fade-in">
 				<div class="contact-info fade-in">
-					<p> Email: <a href="mailto:wandjiyann8@gmail.com">wandjiyann8@gmail.com</a></p>
-					<p> Github: <a href="https://github.com/WANDJITCHALEUYANNFELIX8" target="_blank">github.com/WANDJITCHALEUYANNFELIX8</a></p>
-					<p> Téléphone: <a href="tel:+237698121521"> +237 698 12 15 21</a></p>
+					<p> Email: <a href="#" class="mail-link" target="_blank" rel="noopener noreferrer">Me contacter</a></p>
+					<p> Github: <a href="https://github.com/WANDJITCHALEUYANNFELIX8" target="_blank" rel="noopener noreferrer">Voir mon github</a></p>
+					<p> Téléphone: <a href="#" class="tel-link" target="_blank" rel="noopener noreferrer"> Me joindre</a></p>
 				</div>	
 				
 				
 				
 				<form id="contact-form" class="contact-form fade-in" action="https://formspree.io/f/mojkgzlz" method="POST">
+					<input type="text" name="_gotcha" style="display:none">
 					<label for="name">Nom</label>
 					<input type="text" id="name" name="name" placeholder="Votre nom" required>
 					<label for="email">Email</label>
@@ -280,15 +292,15 @@
 			</div>
 			
 			<div class="footer-right">
-				<a href="mailto:wandjiyann8@gmail.com">
+				<a href="#" class="mail-link" target="_blank" rel="noopener noreferrer">
 					<img src="images/mail.jpg" alt="Email">
 				</a>
-				<a href="https://github.com/WANDJITCHALEUYANNFELIX8" target="_blank">
+				<a href="https://github.com/WANDJITCHALEUYANNFELIX8" target="_blank" rel="noopener noreferrer">
 					<img src="images/github3.jpg" alt="GitHub">
 				</a>
 				
 				
-				<a href="https://wa.me/237698121521" target="_blank">
+				<a href="#" class="tel-link" target="_blank" rel="noopener noreferrer">
         <img src="images/whatsapp1.jpg" alt="WhatsApp">
         		</a>
         		

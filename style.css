@@ -51,7 +51,7 @@ body{
 
 /*==============main et section===========*/	
 main{
-	margin-top: 20px;
+	margin-top: 100px;
 }		
 	
 section{
@@ -163,9 +163,35 @@ section h2{
 .hero-text h2{
 	font-size:28px;
 	margin-bottom:10px;
-	
 
 }
+.hero-img{
+	width:200px;
+	height:200px;
+	margin-top: 40px;
+	border-radius:50%;
+	box-shadow:0 0 30px #00c500;
+	animation: float 4s ease-in-out infinite, glow 3s infinite,zoom 5s infinite;
+}
+
+@keyframes float{
+	0%{transform: translateY(0px);}
+	50%{transform: translateY(-15px);}
+	100%{transform: translateY(0px);}
+}
+
+@keyframes glow{
+	0%{box-shadow:0 0 10px #00c500;}
+	50%{box-shadow:0 0 40px #00ffcc;}
+	100%{box-shadow:0 0 10px #00c500;}
+}
+@keyframes zoom{
+	0%{transform: scale(1);}
+	50%{transform: scale(1.05);}
+	100%{transform: scale(1);}
+}
+
+
 
 .hero-text h1{
 	font-size:58px;
@@ -176,6 +202,15 @@ section h2{
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     text-shadow:0 0 65px #00c500;
+    animation: glowing 2.5s infinite alternate;
+}
+@keyframes glowing{
+    from{
+        text-shadow: 0 0 10px #00c500;
+    }
+    to{
+        text-shadow: 0 0 25px #00ffcc, 0 0 50px #00c500;
+    }
 }
 
 .hero-text h3{
@@ -244,7 +279,7 @@ section h2{
 	
 	grid-template-columns:repeat(3,1fr);
 	background:rgba(255,255,255,0.05);
-	margin-top:40px;
+	margin-top:200px;
     backdrop-filter:blur(12px);
     padding:50px 55px;
     border-radius:15px;
@@ -732,7 +767,7 @@ section h2{
 .fade-in{
 	opacity: 0;
 	transform:translateY(30px);
-	transition: opacity 1s ease-out,transform 1s ease-out,translate 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+	transition: opacity 0.8s ease-out,transform 0.8s ease-out,translate 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 .fade-in.show{
 	opacity: 1;
