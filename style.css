@@ -45,7 +45,17 @@ body{
 	height:100%;
 	z-index:-1;	
 }
-
+#progress-bar{
+	position:fixed;
+	top:0;
+	left:0;
+	width:0%;
+	height:3px;
+	background: linear-gradient(90deg, #00c500, #00ffcc);
+	z-index:9999;
+	transition: width 0.1s ease;
+	box-shadow:0 0 8px #00c500;
+}
 
 	
 
@@ -515,13 +525,13 @@ section h2{
 }	
 	
 .tool-card.network{
-	background:url("images/network2.jpg") center/cover;
+	background:url("images/network2.webp") center/cover;
 }
 .tool-card.security{
-	background:url("images/im1.jpg") center/cover;
+	background:url("images/im1.webp") center/cover;
 }
 .tool-card.design{
-	background:url("images/design1.jpg") center/cover;
+	background:url("images/design1.webp") center/cover;
 }
 .overlay-card{
 	position:absolute;
