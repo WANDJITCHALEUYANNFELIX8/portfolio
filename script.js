@@ -32,7 +32,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let particules = [] /*tableau pour contenir les particules*/
-let numberParticles = window.innerWidth < 768 ? 60 : 100;
+let numberParticles = window.innerWidth < 768 ? 30 : 100;
 for (let i=0;i<numberParticles;i++){
 	particules.push({
 		x: Math.random()*canvas.width,
@@ -218,7 +218,9 @@ window.addEventListener('scroll', () => {
 	const docHeight=document.documentElement.scrollHeight-window.innerHeight;
 	const progress =(scrollTop / docHeight)*100;
 	progressBar.style.width=progress+'%';
-});	
+});
+
+	
 		
 		
 		

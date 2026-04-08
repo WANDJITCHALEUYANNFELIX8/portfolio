@@ -176,18 +176,18 @@ section h2{
 
 }
 .hero-img{
-	width:200px;
-	height:200px;
+	width:250px;
+	height:250px;
 	margin-top: 40px;
 	border-radius:50%;
 	box-shadow:0 0 30px #00c500;
-	animation: float 4s ease-in-out infinite, glow 3s infinite,zoom 5s infinite;
+	animation: float 4s ease-in-out infinite, glow 3s infinite;
 }
 
 @keyframes float{
-	0%{transform: translateY(0px);}
-	50%{transform: translateY(-15px);}
-	100%{transform: translateY(0px);}
+	0%{transform: translateY(0px) scale(1);}
+	50%{transform: translateY(-15px) scale(1.05);}
+	100%{transform: translateY(0px) scale(1);}
 }
 
 @keyframes glow{
@@ -195,11 +195,7 @@ section h2{
 	50%{box-shadow:0 0 40px #00ffcc;}
 	100%{box-shadow:0 0 10px #00c500;}
 }
-@keyframes zoom{
-	0%{transform: scale(1);}
-	50%{transform: scale(1.05);}
-	100%{transform: scale(1);}
-}
+
 
 
 
@@ -290,6 +286,7 @@ section h2{
 	grid-template-columns:repeat(3,1fr);
 	background:rgba(255,255,255,0.05);
 	margin-top:200px;
+	 -webkit-backdrop-filter: blur(12px);
     backdrop-filter:blur(12px);
     padding:50px 55px;
     border-radius:15px;
@@ -335,6 +332,7 @@ section h2{
 .project-card{
 	background:rgba(255,255,255,0.05);
 	margin-top:40px;
+	 -webkit-backdrop-filter: blur(12px);
     backdrop-filter:blur(12px);
     padding:50px 55px;
     border-radius:15px;
@@ -366,6 +364,7 @@ section h2{
 
 #skills{
 	background:rgba(255,255,255,0.05);
+	 -webkit-backdrop-filter: blur(12px);
     backdrop-filter:blur(12px);
     margin-top: 80px;
     padding:50px 55px;
@@ -563,6 +562,7 @@ section h2{
 	margin-top:40px;
 	padding:50px 20px;
 	border-radius:15px;
+	 -webkit-backdrop-filter: blur(12px);
 	backdrop-filter:blur(10px);
 	text-algn:center;
 	box-shadow:0 6px 20px #00c500;
@@ -753,7 +753,12 @@ section h2{
   	}
   	.hero-text h1 {
     	font-size: 36px; /* au lieu de 58px */
+    	animation: none;
   	}
+  	.hero-img {
+        animation: glow 3s infinite; /* seulement glow sur mobile */
+    }
+
   	.hero-text h2 {
     	font-size: 20px;
   	}
@@ -788,7 +793,11 @@ section h2{
 	
 /*ease-out: fait démarrer vite et finir doucement*/	
 	
-	
+@supports not (backdrop-filter: blur(12px)) {
+    #about, .project-card, #skills, #contact {
+        background: rgba(13, 27, 42, 0.95); /* fallback sans blur */
+    }
+}	
 	
 	
 	
